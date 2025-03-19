@@ -7,9 +7,9 @@ const Content = () => {
         return name[int];
     }
   return (
-    <div>
+    <main>
     <p>lets grow {cll()}</p>
-    </div>
+    </main>
   )
 }
 
