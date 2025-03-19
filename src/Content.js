@@ -2,12 +2,13 @@ import React from 'react'
 import { useState } from 'react';
 
 const Content = () => {
-    function cll(){
+    /* function cll(){
         const name=["money","kind","love"];
         const int=Math.floor(Math.random()*name.length);
-        setName(name[int])
+        return(name[int])
     }
-    /* const onclicke=()=>{
+
+    const onclicke=()=>{
         console.log("u clicked")
     }
     function onc(names){
@@ -15,20 +16,35 @@ const Content = () => {
     }
     const onc3=(e)=>{
         console.log(e.target.innerText)
-    } */
-  
-        const [name,setName]=useState("money")
-        
-  return (
-    <main>
-     {/*    <p onDoubleClick={()=>{onclikec()}}>lets grow</p> */}
-    <p >lets grow {name}</p>
-    <button onClick={cll}>clik</button>
-   {/*  <button onClick={()=>onclicke()}>click it</button>
-   {/*  <button onClick={()=>onc('viswa')}>click it2</button>
-    <button onClick={(e)=>onc3(e)}>click it3</button> */} 
+    }
+  const no=[4,5,23,-12]
+  const items=no.filter(n=>n>0).map(n=>({numer:n}))
+  console.log(items)
+         */
+  /* 
+   */
 
-    </main>
+ const [items,setItems]= useState(
+    [{id:1,checked:true,item:"pc"},
+      {id:2,checked:true,item:"ec"},
+      {id:3,checked:false,item:"mc"}
+
+    ]
+  )
+  return (
+   <main>
+    <ul>
+      {items.map((item)=>(
+        <li>
+          <input type='checkbox' 
+          checked={item.checked}/>
+          <label>{item.item}</label>
+          <button>delete</button>
+        </li>
+      ))}
+
+    </ul>
+   </main>
   )
 }
 
