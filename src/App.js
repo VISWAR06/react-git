@@ -1,6 +1,8 @@
 import Header from "./Header"
+import Content from "./Content"
+import Footer from "./Footer"
 function App(){
-/*  const chg = () =>{
+ /* const chg = () =>{
     const name=["hello","hi","how"]
     const int=Math.floor(Math.random()*name.length)
     return name[int]
@@ -9,12 +11,15 @@ function App(){
     const name=["not","in","out"]
     const int=Math.floor(Math.random()*name.length)
     return name[int]
-  }
-   */
+  } */
+  
 
   return(
     <div>
-    <Header/>
+    
+  <Header/>
+  <Content/>
+  <Footer/>
     </div>
   )
 }
