@@ -1,6 +1,7 @@
 import Header from "./Header"
 import Content from "./Content"
 import Footer from "./Footer"
+import Usestate from "./Usestate"
 function App(){
  /* const chg = () =>{
     const name=["hello","hi","how"]
@@ -15,11 +16,12 @@ function App(){
   
 
   return(
-    <div>
+    <div>{/*  <Usestate/> */}
     
   <Header/>
   <Content/>
   <Footer/>
+ 
     </div>
   )
 }
