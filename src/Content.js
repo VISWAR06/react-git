@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState } from 'react';
+import {FaTrashAlt } from "react-icons/fa";
 
 const Content = () => {
     /* function cll(){
@@ -31,19 +32,33 @@ const Content = () => {
 
     ]
   )
+  const chng1=(id)=>{
+   setItems(items.map((item)=>
+  item.id===id?{...item,checked:!item.checked}:item))
+  }
+  const dlt=(id)=>{
+    setItems(items.filter((item)=>item.id!==id))
+  }
   return (
-   <main>
+   <main>{(items.length)?(
     <ul>
       {items.map((item)=>(
-        <li>
-          <input type='checkbox' 
+        <li className='item' key={item.id}>
+          <input type='checkbox'
+           onChange={()=>chng1(item.id)}
           checked={item.checked}/>
           <label>{item.item}</label>
-          <button>delete</button>
+          <FaTrashAlt
+          onClick={()=>dlt(item.id)}
+          role="button"
+          tabIndex="0"
+          />
         </li>
       ))}
 
     </ul>
+   ):<p>list is empty</p>
+  }
    </main>
   )
 }

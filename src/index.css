@@ -58,7 +58,7 @@ footer {
   place-content: center;
 }
 
-/* ul {
+ul {
   width: 100%;
   list-style: none;
   padding: 0 0.25rem 0.25rem;
@@ -182,4 +182,4 @@ button:hover {
   padding: 0.25rem;
   border-radius: 0.25rem;
   outline: none;
-} */
+}
