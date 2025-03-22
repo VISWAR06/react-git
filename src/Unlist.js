@@ -10,6 +10,7 @@ const Unlist = ({items,chng1,dlt}) => {
         item={item}
         chng1={chng1}
         dlt={dlt}
+        key={item.id}
         />
       ))}
 
