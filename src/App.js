@@ -1,7 +1,7 @@
 import Header from "./Header"
 import Content from "./Content"
 import Footer from "./Footer"
-import { useState } from 'react';
+import { useState ,useEffect} from 'react';
 import Additem from "./Additem";
 import Srch from "./Srch";
 
@@ -17,8 +17,12 @@ function App(){
     return name[int]
   } */
   const [items,setItems]= useState(
+     [] )
+     useEffect(()=>{
       JSON.parse(localStorage.getItem("todo"))
-    )
+     })
+     
+    
     const addItem=(item)=>{
       const id= items.length?items[items.length-1].id+1:1
       const addNewItem={id,checked:false,item}
